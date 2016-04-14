@@ -16,6 +16,8 @@ public class BreadthFirstSearch : SearchAlgorithm {
 	
 	protected override void Step()
 	{
+		
+
 		if (openQueue.Count > 0)
 		{
 			SearchNode cur_node = openQueue.Dequeue();

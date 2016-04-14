@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -45,7 +46,7 @@ public abstract class SearchAlgorithm : MonoBehaviour {
 
 	public int stepsPerFrame = 10;
 	[HideInInspector]public ISearchProblem problem;
-
+	int howMany = 0;
 	protected bool running = false;
 	protected bool finished = false;
 	protected SearchNode solution = null;
@@ -54,6 +55,8 @@ public abstract class SearchAlgorithm : MonoBehaviour {
 		if (running && !finished) {
 			for (int i = 0; i < stepsPerFrame; i++) {
 				if (!finished) {
+					print (howMany);
+					howMany++;
 					Step ();
 				}
 			}
