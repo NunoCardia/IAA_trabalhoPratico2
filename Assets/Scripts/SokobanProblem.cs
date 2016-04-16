@@ -163,6 +163,19 @@ public class SokobanProblem : ISearchProblem {
 		return false;
 	}
 
+	public int getRemainingGoals(object state){
+		SokobanState s = (SokobanState)state;
+		int remainingGoals = goals.Count;
+
+		foreach (Vector2 crate in s.crates) {
+			if (goals.Contains (crate)) {
+				remainingGoals--;
+			}
+		}
+		return(remainingGoals);
+	}
+		
+
 	public Successor[] GetSuccessors(object state)
 	{
 		SokobanState s = (SokobanState)state;

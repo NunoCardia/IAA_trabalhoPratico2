@@ -76,6 +76,7 @@
 -define:UNITY_EDITOR
 -define:UNITY_EDITOR_64
 -define:UNITY_EDITOR_OSX
+'Assets/Scripts/AStarSeach.cs'
 'Assets/Scripts/BreadthFirstSearch.cs'
 'Assets/Scripts/LimitedDepthSearch.cs'
 'Assets/Scripts/Map.cs'
